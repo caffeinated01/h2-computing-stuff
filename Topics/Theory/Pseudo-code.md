@@ -24,7 +24,7 @@ A name for a variable, constant, function, or procedure
 - **Assignment:** The `←` operator assigns a value to a variable
   - e.g. `is_black ← TRUE`
 - **Operators:**
-  - **Arithmetic:** `+`, `-`, `*`, `/`, `MOD` 
+  - **Arithmetic:** `+`, `-`, `*`, `/`, `MOD`, `DIV` (floor divide)
   - **Relational:** `>`, `<`, `>=`, `<=`, `=`, `<>` (not equal)
   - **Logical:** `AND`, `OR`, `NOT`
 

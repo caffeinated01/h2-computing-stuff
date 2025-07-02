@@ -36,13 +36,15 @@ A table used to model complex logic by mapping all possible combinations of cond
 A decision table is divided into four quadrants:
 1.  **Conditions:** The logical conditions to be tested
 2.  **Actions:** The possible actions to be taken
-3.  **Condition Entries:** The combinations of condition outcomes (e.g., `Y`/`N`). Each column is a **rule**
-4.  **Action Entries:** The actions to perform for each rule (e.g., `X` to mark the action)
+3.  **Condition Entries:** The combinations of condition outcomes (`Y`/`N`, `-` for insignificant). 
+4.  **Action Entries:** The actions to perform for each rule (`X` to mark the action, `*` for no such outcome)
 - Easiest way to fill up decision table (conditions):
 	1. Last Row: Start with the easiest pattern: Y N Y N ...
 	2. Row Above: Double the block size: Y Y N N ...
 	3. Row Above That: Double again: Y Y Y Y N N N N ...
 	4. Continue until the top row is filled.
+
+$2^n$ scenarios, where $n$ is the number of conditions
 
 ### Decision Table Example (Tutorial Q7)
 
