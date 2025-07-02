@@ -12,11 +12,11 @@ have only one item.
 - You keep merging until all the little lists become one big sorted list.
 
 ## Time Complexity
-| Case             | Complexity   | Description                                               |
-| :--------------- | :----------- | :-------------------------------------------------------- |
-| **Best Case**    | `O(n log n)` | The number of divisions and merges is always the same     |
-| **Worst Case**   | `O(n log n)` | The performance is consistent regardless of initial order |
-| **Average Case** | `O(n log n)` | The performance is consistent regardless of initial order |
+| Case             | Complexity   | Description                                                                                                                                                                             |
+| :--------------- | :----------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Best Case**    | `O(n log n)` | The average time complexity is O(n log n), as the algorithm recursively splits the array into halves ($\log_2n$ levels), and each level performs a linear-time merge of all n elements. |
+| **Worst Case**   | `O(n log n)` | The performance is consistent regardless of initial order                                                                                                                               |
+| **Average Case** | `O(n log n)` | The performance is consistent regardless of initial order                                                                                                                               |
 
 ## Implementation (Python)
 ```python

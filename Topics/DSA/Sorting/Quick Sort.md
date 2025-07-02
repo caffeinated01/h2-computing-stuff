@@ -23,11 +23,11 @@ A "divide and conquer" sorting algorithm
 5. Return `r`, which is the index where the pivot is now correctly placed
 
 ## Time complexity
-| Case             | Complexity   | Description                                                                                                                   |
-| :--------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| **Best Case**    | `O(n log n)` | The pivot always divides the list into two nearly equal halves                                                                |
-| **Worst Case**   | `O(n²)`      | The pivot is consistently the smallest or largest element, leading to unbalanced partitions (e.g., on an already sorted list) |
-| **Average Case** | `O(n log n)` | The pivot choices lead to reasonably balanced partitions                                                                      |
+| Case             | Complexity   | Description                                                                                                                                                  |
+| :--------------- | :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Best Case**    | `O(n log n)` | The algorithm partitions the array into halves in each step, leading to logarithmic depth in the recursion tree, and the partitioning step takes linear time |
+| **Worst Case**   | `O(n²)`      | The pivot is consistently the smallest or largest element, leading to unbalanced partitions (e.g., on an already sorted list)                                |
+| **Average Case** | `O(n log n)` | The pivot choices lead to reasonably balanced partitions                                                                                                     |
 
 ## Implementation
 
@@ -58,4 +58,19 @@ def partition(arr, low, high):
     arr[r], arr[low] = arr[low], arr[r]
 
     return r
+```
+
+To sort in reverse order, change
+```python
+        while l <= r and arr[l] <= pivot:
+            l += 1
+        while l <= r and arr[r] > pivot:
+            r -= 1
+```
+to 
+```python
+        while l <= r and arr[l] >= pivot:
+            l += 1
+        while l <= r and arr[r] < pivot:
+            r -= 1
 ```

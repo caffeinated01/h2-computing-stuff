@@ -95,7 +95,7 @@ ENDIF
 
 - **`FOR` Loop (Count-Controlled):** Used when the number of iterations is known beforehand
   ```pseudocode
-  FOR Count ← 1 TO 10 STEP 1
+  FOR index ← 1 TO 10 STEP 1
       // Statements to repeat
   ENDFOR
   ```
